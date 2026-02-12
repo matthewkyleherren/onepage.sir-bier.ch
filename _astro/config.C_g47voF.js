@@ -1,0 +1,1 @@
+const e=Object.freeze({RESIZE_END:"loco.resizeEnd",MODAL_OPEN:"modal.open",MODAL_CLOSE:"modal.close",VISIT_START:"visit.start",NAVIGATION_UPDATED:"navigation:updated",NAVIGATION_INIT:"navigation:init"}),i=Object.freeze({AGE_VERIFICATION_DONE:"is-age-verification-done"});export{e as C,i as H};

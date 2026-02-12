@@ -1,0 +1,1 @@
+import{a as u}from"./index.3whys8t3.js";let i=(o={})=>{let e=u(o);return e.setKey=function(a,t){let l=e.value;typeof t>"u"&&a in e.value?(e.value={...e.value},delete e.value[a],e.notify(l,a)):e.value[a]!==t&&(e.value={...e.value,[a]:t},e.notify(l,a))},e};export{i as m};

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <url>
+        <loc>https://www.aupalevodka.com/en/</loc>
+        
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.aupalevodka.com/en/"/><xhtml:link rel="alternate" hreflang="fr" href="https://www.aupalevodka.com/fr/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.aupalevodka.com/en/"/>
+    </url>
+    <url>
+        <loc>https://www.aupalevodka.com/en/pages/terms-and-conditions</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.aupalevodka.com/en/pages/terms-and-conditions"/><xhtml:link rel="alternate" hreflang="fr" href="https://www.aupalevodka.com/fr/pages/terms-and-conditions"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.aupalevodka.com/en/pages/terms-and-conditions"/>
+    </url>
+</urlset>

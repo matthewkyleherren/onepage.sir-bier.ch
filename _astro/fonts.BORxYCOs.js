@@ -1,0 +1,1 @@
+const t={state:{isLoaded:!1},listeners:new Set,setIsLoaded(s){this.state.isLoaded=s,this.listeners.forEach(e=>e(this.state))},subscribe(s){return this.listeners.add(s),s(this.state),()=>this.listeners.delete(s)}};export{t as $};
