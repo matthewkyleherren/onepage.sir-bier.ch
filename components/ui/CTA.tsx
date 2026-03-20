@@ -2,14 +2,14 @@
 
 import { clsx } from "clsx";
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { ReactNode, MouseEvent } from "react";
 
 type CTAVariant = "text" | "filled" | "outline" | "none";
 
 interface CTAProps {
   children: ReactNode;
   href?: string;
-  onClick?: () => void;
+  onClick?: (e?: MouseEvent) => void;
   variant?: CTAVariant;
   className?: string;
   external?: boolean;
@@ -28,6 +28,12 @@ export function CTA({
   const baseClasses = "c-cta";
   const variantClass = `-variant-${variant}`;
 
+  const handleClick = (e: MouseEvent) => {
+    if (onClick) {
+      onClick(e);
+    }
+  };
+
   const innerContent = (
     <span className="c-cta-content">{children}</span>
   );
@@ -41,6 +47,7 @@ export function CTA({
             target="_blank"
             rel="noopener noreferrer"
             className="c-cta-inner"
+            onClick={handleClick}
           >
             {innerContent}
           </a>
@@ -51,7 +58,7 @@ export function CTA({
     if (scrollTo) {
       return (
         <span className={clsx(baseClasses, variantClass, className)}>
-          <a href={href} className="c-cta-inner">
+          <a href={href} className="c-cta-inner" onClick={handleClick}>
             {innerContent}
           </a>
         </span>
@@ -60,7 +67,7 @@ export function CTA({
 
     return (
       <span className={clsx(baseClasses, variantClass, className)}>
-        <Link href={href} className="c-cta-inner">
+        <Link href={href} className="c-cta-inner" onClick={handleClick}>
           {innerContent}
         </Link>
       </span>
@@ -69,7 +76,7 @@ export function CTA({
 
   return (
     <span className={clsx(baseClasses, variantClass, className)}>
-      <button onClick={onClick} className="c-cta-inner">
+      <button onClick={handleClick} className="c-cta-inner">
         {innerContent}
       </button>
     </span>

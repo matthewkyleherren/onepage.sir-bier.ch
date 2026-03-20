@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { InlineVideo } from "@/components/ui/InlineVideo";
 import { SplitParagraph } from "@/components/ui/SplitParagraph";
 import { CTA } from "@/components/ui/CTA";
-import { Icon } from "@/components/ui/Icon";
 
 interface PrefooterProps {
   headline: string;
@@ -50,7 +49,7 @@ export function Prefooter({
             <span className="c-prefooter_label text-mono-xs uppercase">
               {subheadline}
             </span>
-            <h2 className="c-prefooter_headline text-display-lg">
+            <h2 className="c-prefooter_headline text-heading-lg">
               {headline}
             </h2>
             <div className="c-prefooter_description text-body-md">
@@ -58,11 +57,7 @@ export function Prefooter({
             </div>
             {ctaText && ctaHref && (
               <div className="c-prefooter_cta">
-                <CTA
-                  href={ctaHref}
-                  variant="text"
-                  icon={<Icon name="arrow-right" size={16} />}
-                >
+                <CTA href={ctaHref} variant="text">
                   {ctaText}
                 </CTA>
               </div>
