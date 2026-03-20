@@ -37,7 +37,7 @@ export function Footer() {
   return (
     <footer className="c-footer dark">
       {/* Rail / Marquee */}
-      <Rail text="Taste the Tradition" />
+      <Rail items={["Taste the Tradition", "SIR BIER", "Swiss Crafted", "Premium Quality"]} />
 
       <div className="container">
         {/* Logo */}
