@@ -1,9 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { ScrollProvider } from "@/components/providers/ScrollProvider";
 
 export const metadata: Metadata = {
   title: "SIR BIER - Brewed, differently.",
-  description: "Swiss premium brew made with the best process.",
+  description: "Swiss premium brew made with the finest ingredients and traditional craftsmanship.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#050505",
 };
 
 export default function RootLayout({
@@ -13,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-black">
-      <body>{children}</body>
+      <body>
+        <ScrollProvider>{children}</ScrollProvider>
+      </body>
     </html>
   );
 }
