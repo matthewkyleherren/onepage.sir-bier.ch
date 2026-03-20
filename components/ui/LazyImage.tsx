@@ -56,7 +56,7 @@ export function LazyImage({
     <div
       ref={containerRef}
       className={clsx(
-        "c-image",
+        "c-image relative",
         cover && "-cover",
         "-lazy-load",
         isLoaded && "is-loaded",
@@ -64,7 +64,7 @@ export function LazyImage({
         containerClassName
       )}
     >
-      <div className="c-image_inner">
+      <div className="c-image_inner relative w-full h-full">
         {fill ? (
           <Image
             src={src}

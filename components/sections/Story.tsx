@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { motion, useScroll, useInView } from "framer-motion";
 import { SplitParagraph, AnimatedText } from "@/components/ui/SplitParagraph";
 import { LazyImage } from "@/components/ui/LazyImage";
 
@@ -71,7 +71,7 @@ function StoryChapter({
               ease: [0.645, 0.045, 0.355, 1],
             }}
           >
-            <div className="aspect-[4/5] relative overflow-hidden">
+            <div style={{ aspectRatio: "4/5", position: "relative", overflow: "hidden" }}>
               <LazyImage
                 src={chapter.image}
                 alt={chapter.title}
@@ -128,7 +128,7 @@ export function Story() {
   });
 
   return (
-    <section ref={containerRef} className="c-story">
+    <section ref={containerRef} className="c-story" style={{ position: "relative" }}>
       {/* Intro */}
       <div className="c-story_intro py-fluid-5xl light" id="philosophy">
         <div className="container">
