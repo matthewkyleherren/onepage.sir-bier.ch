@@ -3,14 +3,14 @@
 import { clsx } from "clsx";
 
 interface RailProps {
-  text: string;
+  items: string[];
   className?: string;
   speed?: number;
 }
 
-export function Rail({ text, className, speed = 20 }: RailProps) {
-  // Duplicate text enough times to ensure seamless loop
-  const items = Array(8).fill(text);
+export function Rail({ items, className, speed = 20 }: RailProps) {
+  // Duplicate items for seamless scrolling
+  const duplicatedItems = [...items, ...items];
 
   return (
     <div className={clsx("c-rail", className)}>
@@ -20,17 +20,17 @@ export function Rail({ text, className, speed = 20 }: RailProps) {
           animationDuration: `${speed}s`,
         }}
       >
-        {items.map((item, index) => (
+        {duplicatedItems.map((item, index) => (
           <span
             key={index}
             className="c-rail_item text-heading-3xl"
-            aria-hidden={index > 0}
+            aria-hidden={index >= items.length}
           >
             {item}
           </span>
         ))}
       </div>
-      {/* Duplicate for seamless loop */}
+      {/* Duplicate track for seamless loop */}
       <div
         className="c-rail_inner"
         style={{
@@ -38,7 +38,7 @@ export function Rail({ text, className, speed = 20 }: RailProps) {
         }}
         aria-hidden
       >
-        {items.map((item, index) => (
+        {duplicatedItems.map((item, index) => (
           <span key={index} className="c-rail_item text-heading-3xl">
             {item}
           </span>

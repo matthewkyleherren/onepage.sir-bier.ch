@@ -8,7 +8,7 @@ import { ProductModal } from "@/components/modals/ProductModal";
 
 interface ProductCatalogProps {
   category: Product["category"];
-  id: string;
+  id?: string;
 }
 
 export function ProductCatalog({ category, id }: ProductCatalogProps) {
