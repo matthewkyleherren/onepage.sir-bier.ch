@@ -54,7 +54,7 @@ export function Prefooter({
               {headline}
             </h2>
             <div className="c-prefooter_description text-body-md">
-              <SplitParagraph text={description} />
+              <SplitParagraph>{description}</SplitParagraph>
             </div>
             {ctaText && ctaHref && (
               <div className="c-prefooter_cta">

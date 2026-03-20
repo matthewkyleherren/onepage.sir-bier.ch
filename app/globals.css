@@ -40,7 +40,7 @@
    THEME CONFIGURATION
    ============================================ */
 
-@theme {
+@theme inline {
   /* Fonts */
   --font-sans: "HelveticaNowDisplay", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Martha", ui-serif, Georgia, serif;
@@ -625,6 +625,31 @@ ul {
   transition-delay: 0.4s;
   transform: translateY(0);
 }
+
+/* Fluid position utilities */
+.top-fluid-xs { top: var(--spacing-fluid-xs); }
+.top-fluid-sm { top: var(--spacing-fluid-sm); }
+.top-fluid-md { top: var(--spacing-fluid-md); }
+.top-fluid-lg { top: var(--spacing-fluid-lg); }
+.top-fluid-xl { top: var(--spacing-fluid-xl); }
+
+.right-fluid-xs { right: var(--spacing-fluid-xs); }
+.right-fluid-sm { right: var(--spacing-fluid-sm); }
+.right-fluid-md { right: var(--spacing-fluid-md); }
+.right-fluid-lg { right: var(--spacing-fluid-lg); }
+.right-fluid-xl { right: var(--spacing-fluid-xl); }
+
+.bottom-fluid-xs { bottom: var(--spacing-fluid-xs); }
+.bottom-fluid-sm { bottom: var(--spacing-fluid-sm); }
+.bottom-fluid-md { bottom: var(--spacing-fluid-md); }
+.bottom-fluid-lg { bottom: var(--spacing-fluid-lg); }
+.bottom-fluid-xl { bottom: var(--spacing-fluid-xl); }
+
+.left-fluid-xs { left: var(--spacing-fluid-xs); }
+.left-fluid-sm { left: var(--spacing-fluid-sm); }
+.left-fluid-md { left: var(--spacing-fluid-md); }
+.left-fluid-lg { left: var(--spacing-fluid-lg); }
+.left-fluid-xl { left: var(--spacing-fluid-xl); }
 
 /* Fluid spacing utilities */
 .pt-fluid-xs { padding-top: var(--spacing-fluid-xs); }
