@@ -1,3 +1,4 @@
+import { type ReactNode } from "react";
 import { clsx } from "clsx";
 
 type IconName =
@@ -16,7 +17,7 @@ interface IconProps {
   size?: number | string;
 }
 
-const icons: Record<IconName, { viewBox: string; path: JSX.Element }> = {
+const icons: Record<IconName, { viewBox: string; path: ReactNode }> = {
   dropdown: {
     viewBox: "0 0 10 7",
     path: <path fill="none" stroke="currentColor" d="m.372.334 4.5 5 4.5-5" />,
