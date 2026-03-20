@@ -14,6 +14,7 @@ interface CTAProps {
   className?: string;
   external?: boolean;
   scrollTo?: boolean;
+  icon?: ReactNode;
 }
 
 export function CTA({
@@ -24,6 +25,7 @@ export function CTA({
   className,
   external = false,
   scrollTo = false,
+  icon,
 }: CTAProps) {
   const baseClasses = "c-cta";
   const variantClass = `-variant-${variant}`;
@@ -35,7 +37,10 @@ export function CTA({
   };
 
   const innerContent = (
-    <span className="c-cta-content">{children}</span>
+    <>
+      <span className="c-cta-content">{children}</span>
+      {icon && <span className="c-cta-icon">{icon}</span>}
+    </>
   );
 
   if (href) {
